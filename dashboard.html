@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="home_cnt">
+        <div id="booksContainers">
+            <!-- <div class="card">
+                <img src="image_url" alt="Book Cover">
+                <div class="details">
+                    <h3>Book Title</h3>
+                    <p>Author: Author Name</p>
+                    <p>First Published: Year</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="content" style="margin-left: 15px;">
+            <h1>Welcome, Admin</h1>
+            <div class="add">
+                <p>Quick Actions:</p>
+                <button id="newBook">Add new book</button>
+            </div>
+        </div>
+        <p id="time" style="margin-left: 15px;">time will go here</p>
+        <div class="info">
+            <div id="bk">
+                <div id="bk1" style="background-color: rgba(255, 99, 132, 0.15); box-shadow:0px 4px 4px rgba(255, 99, 132, 0.15) ; border: 1px solid rgba(255, 99, 132, 0.15);">
+                <i class="fa-solid fa-book-open" style="color:rgb(255, 99, 132, 0.7); "></i>
+                <h3>Total Books</h3>
+                <h2>2000</h2>
+                <button id="details">View Details</button>
+            </div>
+            </div>
+            <div id="bk">
+                <div id="bk2" style="background-color:rgba(255, 206, 86, 0.15); box-shadow:0px 4px 4px rgba(255, 206, 86, 0.15) ; border: 1px solid rgba(255, 206, 86, 0.15);">
+                <i class="fa-solid fa-book-open" style="color:rgba(255, 206, 86, 0.7) "></i>
+                <h3>Lended Books</h3>
+                <h2>500</h2>
+                <button id="details">View Details</button>
+            </div>
+            </div>
+            <div id="bk">
+                <div id="bk3" style="background-color: rgba(75, 192, 192, 0.15); box-shadow:0px 4px 4px rgba(75, 192, 192, 0.15) ; border: 1px solid rgba(75, 192, 192, 0.15);">
+                <i class="fa-solid fa-book-open" style="color:rgba(75, 192, 192, 0.7) "></i>
+                <h3>Available Books</h3>
+                <h2>1500</h2>
+                <button id="details">View Details</button>
+            </div>
+            </div>
+            <div id="bk">
+                <div id="bk4" style="background-color: rgba(153, 102, 255, 0.15); box-shadow:0px 4px 4px rgba(153, 102, 255, 0.15); border: 1px solid rgba(153, 102, 255, 0.15);">
+                <i class="fa-solid fa-users-line" style="color:rgba(153, 102, 255, 0.7) "></i>
+                <h3>Total Users</h3>
+                <h2>500</h2>
+                <button id="details">View Details</button>
+            </div>
+            </div>
+            <div id="bk">
+                <div id="bk5" style="background-color: rgb(252, 90, 102, 0.15); box-shadow:0px 4px 4px rgb(252, 90, 102, 0.15) ; border: 1px solid rgb(252, 90, 102, 0.15);">
+                <i class="fa-solid fa-book-open"  style="color:rgb(252, 90, 102, 0.7) "></i>
+                <h3>Overdue Books</h3>
+                <h2>30</h2>
+                <button id="details">View Details</button>
+                
+            </div>
+            </div>
+        </div>
+        <div class="insertions">
+            <div id="genre">
+                <h2>Genre of Books Available</h2>
+                <canvas id="myPieChart"></canvas>
+            </div>
+            
+            <div id="visitors">
+                <h2>No of Visitors</h2>
+                <canvas id="visitorsChart"></canvas>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

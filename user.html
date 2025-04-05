@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div id="logo-cnt">
+            <div id="logo">
+                <i class="fa-solid fa-book"></i>
+                <div id="logo-name">
+                    Tim's Library
+                </div>
+            </div>
+            <i class="fa-solid fa-bars" id="menu-btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-border-none"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-file-zipper"></i>
+                    <span class="links_name">Resources</span>
+                </a>
+                <span class="tooltip">Resources</span>
+            </li><li>
+                <a href="#">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span class="links_name">Manage Books</span>
+                </a>
+                <span class="tooltip">Manage Books</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Members</span>
+                </a>
+                <span class="tooltip">Members</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="links_name">Wishlist</span>
+                </a>
+                <span class="tooltip">Wishlist</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="links_name">Notifications</span>
+                </a>
+                <span class="tooltip">Notifications</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="links_name">Logout</span>
+                </a>
+                <span class="tooltip">Logout</span>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar">
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass" id="srch"></i>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="theme">
+        <i class="fa-solid fa-moon" id="moon" onclick="changeTheme()"></i>
+        <div class="user">
+            <i class="fa-solid fa-user"></i>
+        </div>
+            </div>
+            </div>
+    </div>
+    <div class="home-cnt">
+        
+    </div>
+    <script src="user.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

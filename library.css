@@ -1,0 +1,289 @@
+* {
+    color: grey;
+
+}
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark theme */
+body.dark-theme, .content>.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.navbar {
+    height: 25px;
+    background-color: white;
+}
+
+#name {
+    font-weight: bolder;
+    color: rgb(59, 47, 113);
+    font-size: 21px;
+    margin-left: 60px;
+}
+#color{
+    color: rgb(115, 56, 181);
+}
+a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+#log {
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    background-image: url("bgi.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#nav {
+    margin-left: 430px;
+}
+
+#search {
+    height: 35px;
+    margin-left: 50px;
+     padding-right: 50px; 
+     margin-right: 35px;
+    color: black;
+}
+#search_log{
+    position: absolute;
+    right: 175px;
+    color: rgb(37, 3, 89);
+    top: 13px;
+    font-size: 25px;
+}
+a:hover {
+    color: rgb(37, 5, 80);
+text-shadow: 0px 5px 10px black;
+}
+
+.content {
+    height: 1500px;
+    width: auto;
+    background-color: aliceblue;
+}
+
+#home {
+    color:rgb(37, 3, 89);
+}
+
+.contact {
+    position: relative;
+    top: 500px;
+    left: 50px;
+}
+
+#m {
+    height: 600px;
+    width: 450px;
+    position: absolute;
+    bottom: 5px;
+    right: 65px;
+}
+
+h1 {
+    color: rgb(37, 3, 89);
+    font-weight: 600;
+}
+
+
+
+.about {
+    position: absolute;
+    top: 900px;
+    left: 50px;
+
+}
+
+
+h2 {
+    color:rgb(37, 3, 89);
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#image {
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    left: 950px;
+    bottom: 200px;
+}
+/* #known{
+height: 50px;
+width: 250px ;
+background-color: rgb(26, 48, 67);
+scroll-behavior: auto;
+border-radius: 10px;
+} */
+
+
+#know {
+    background-color: rgb(215, 121, 84);
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 250px;
+    box-shadow: 0 5px 10px rgb(215, 121, 84);
+    transition-property: all;
+    transition-duration: 1.5s;
+}
+#know:hover{
+    background-color: rgb(211, 145, 59);
+    font-size:30px;
+    transform: translate(20px); 
+    box-shadow: none;
+}
+p {
+    font-size: 25px;
+}
+
+#lorem {
+    color: black;
+    font-size: 25px;
+}
+
+#gen {
+    font-size: 30px;
+    position: absolute;
+    left: 235px;
+    bottom: 70px;
+}
+
+#amt {
+    color: orange;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: black 2px 2px;
+}
+
+#book {
+    font-size: 30px;
+}
+
+footer {
+    background-color: rgb(196, 209, 244);
+    height: 700px;
+}
+
+#contact {
+    height: 330px;
+    width: 1400px;
+    background-color: rgb(59, 92, 242);
+    position: absolute;
+    left: 60px;
+}
+
+#t {
+    font-size: 50px;
+    color: white;
+    text-shadow: black 4px 2px;
+    position: absolute;
+    left: 150px;
+}
+
+#Email {
+    height: 65px;
+    width: 350px;
+    font-size: 30px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    padding-right: 300px;
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    color: black;
+}
+
+#subscribeBtn {
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 32px;
+    background-color: rgb(215, 121, 84);
+    transition-property: all;
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 125px;
+    top: 210px;
+}
+#subscribeBtn:hover{
+    transform:scale(1.15);
+    box-shadow: 0 5px 10px rgb(215, 121, 84);
+}
+#subscribeStatus{
+    color: rgb(183, 227, 212);
+    font-size: 25px;
+ position: absolute;
+    right: 95px;
+    top: 270px; 
+}
+.links {
+    position: absolute;
+    top: 450px;
+    font-weight: 600;
+}
+
+#quick {
+    font-size: 20px;
+    position: absolute;
+    top: 400px;
+    right: 650px;
+}
+
+#head {
+    font-weight: 550;
+    color: rgb(37, 3, 89);
+}
+
+#customer {
+    position: absolute;
+    top: 400px;
+    right: 350px;
+}
+
+li {
+    list-style: none;
+    padding-top: 8px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#social {
+    position: absolute;
+    top: 400px;
+    right: 100px;
+}
+
+li:hover {
+    color: black;
+}
+
+#lin {
+    color: rgb(6, 6, 77);
+    padding-top: 15px;
+    padding-left: 35px;
+}
+
+
+#elementToToggle{
+height: 100px;
+width: 100px;
+background-color: aqua;
+}
