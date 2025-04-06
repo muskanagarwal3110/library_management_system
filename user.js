@@ -3,11 +3,14 @@ let sidebar= document.querySelector(".sidebar")
 btn.onclick= function(){
     sidebar.classList.toggle("active")
 }
-const changeth= document.getElementById("moon")
-function changeTheme(){
-    document.body.style.backgroundColor = 
-        document.body.style.backgroundColor === "black" ? "white" : "black";
-}
+// const changeth= document.getElementById("moon")
+// function changeTheme(){
+//     document.body.style.backgroundColor = 
+//         document.body.style.backgroundColor === "black" ? "white" : "black";
+//        if(document.body.style.backgroundColor=== "black"){
+//         document.body.style.color= white;
+//        } 
+// }
 //adding real time
 // let currentTime= new Date()
 // let date= currentTime.toDateString()
@@ -120,28 +123,36 @@ function searchBooks(query) {
         .then(data => {
             const booksContainer = document.querySelector(".home-cnt");
             booksContainer.innerHTML = ""; // Clear previous content (removes "Welcome Admin" and others)
-
+            const booksPerRow=2;
+            let rowContainer= null;
             if (!data.docs.length) {
                 booksContainer.innerHTML = "<p>No books found</p>";
                 return;
             }
 
-            data.docs.slice(0, 6).forEach(book => {
+            data.docs.slice(0, 6).forEach((book, index) => {
+                if (index % booksPerRow === 0){
+                    rowContainer = document.createElement("div");
+                    rowContainer.classList.add("book-row");
+                    booksContainer.appendChild(rowContainer);
+                }
                 const coverID = book.cover_edition_key || book.edition_key?.[0]; // Get the cover ID
-        const coverURL = coverID 
-            ? `https://covers.openlibrary.org/b/olid/${coverID}-M.jpg` 
-            : "https://via.placeholder.com/100x150?text=No+Cover"; // Placeholder for missing covers
-            const bookElement = document.createElement("div");
-            bookElement.classList.add("book-card");
-            bookElement.innerHTML = `
-                <img src="${coverURL}" alt="Book Cover" class="book-cover">
-                <div class="book-info">
-                    <h3>${book.title}</h3>
-                    <p><strong>Author:</strong> ${book.author_name ? book.author_name.join(", ") : "Unknown"}</p>
-                    <p><strong>First Published:</strong> ${book.first_publish_year || "N/A"}</p>
-                </div>
+                if (!coverID) return;
+
+                 const coverURL = `https://covers.openlibrary.org/b/olid/${coverID}-M.jpg`;
+                const bookElement = document.createElement("div");
+                bookElement.classList.add("book-card");
+                bookElement.innerHTML = `
+                <div id="book-div">
+                        <img src="${coverURL}" alt="Book Cover" class="book-cover">
+                        <div class="book-info">
+                            <h3>${book.title}</h3>
+                            <p><strong>Author:</strong> ${book.author_name ? book.author_name.join(", ") : "Unknown"}</p>
+                            <p><strong>First Published:</strong> ${book.first_publish_year || "N/A"}</p>
+                        </div>
+                        </div>
             `;
-            booksContainer.appendChild(bookElement);
+            rowContainer.appendChild(bookElement);
             });
         })
         .catch(error => console.error("Error fetching books:", error));
@@ -161,11 +172,21 @@ function attachFetchBooksListener() {
     }
 
     // Trigger search on clicking the search icon
-    searchIcon.addEventListener("click", performSearch);
+    searchIcon.addEventListener("click",function(){
+        if(searchInput.value.trim()===""){
+            alert("please enter a search query");
+            return ;
+        }
+        performSearch();
+    } );
 
     // Trigger search when pressing Enter in the input field
     searchInput.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
+            if(searchInput.value.trim()===""){
+                alert("please enter a search query");
+                return ;
+            }
             event.preventDefault(); // Prevent form submission (if inside a form)
             performSearch();
         }
